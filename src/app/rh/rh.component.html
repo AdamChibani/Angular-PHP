@@ -1,0 +1,22 @@
+<nav class="bg-dark" style="color: white">
+    Bonjour monsieur {{nom}}
+    <span style="float: right;">
+        <a href="/login" style="color:red;margin-left:15px">Se déconnecter</a>
+    </span>
+</nav>
+
+    <div class="row">
+        <div class="col">Nom</div>
+        <div class="col">Prénom</div>
+        <div class="col">Mail</div>
+        <div class="col">CV</div>
+        <div class="col">Tel</div>
+        <div class="col">Adresse</div>
+        <div class="col">Accepter</div>
+        <div class="col">Refuser</div>
+    </div>
+
+    
+    
+   
+    <app-cv *ngFor="let u of users"  [nom]="u.nom" [prenom]="u.prenom" [mail]="u.mail" [cv]="u.cv" [adresse]="u.adresse" [message]="u.message" [profession]="u.profession" [ville]="u.ville" [tel]="u.tel" [id]="u.id"></app-cv>

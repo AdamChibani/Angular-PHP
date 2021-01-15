@@ -1,0 +1,14 @@
+<form [formGroup]="f" method="POST" *ngIf="t">
+    <div class="row">
+    <div class="col">{{nom}}</div>
+    <div class="col">{{prenom}}</div>
+    <div class="col">{{mail}}</div>
+    <div class="col"><a href="http://localhost/carteAng/{{cv}}">{{message}}</a></div>
+    <div class="col">{{tel}}</div>
+    <div class="col">{{ville}}, {{adresse}}</div>
+    <div class="buttons col"><a href="mailto:{{mail}}?subject=Votre%20cv%20a%20été%20accepter" (click)="accept()">Accepter</a></div>
+    <div class="buttons col"><a href="mailto:{{mail}}?subject=Votre%20cv%20n'a%20pas%20été%20accepter" (click)="refuser()">Refuser</a></div>
+    </div >
+    <input type="hidden" name="id" formControlName="id" value="id">
+
+</form>

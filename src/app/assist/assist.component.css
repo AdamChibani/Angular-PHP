@@ -1,0 +1,17 @@
+
+.row{
+    background-color: rgba(79,136,166,0.2);
+  
+}
+.col{
+    border:3px solid rgba(79,136,166,0.4);
+    text-align: center;
+    padding:2px;
+}
+.buttons{
+    width: 150px;
+}
+input{
+    background: none;
+    border: none;
+}

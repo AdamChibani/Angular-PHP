@@ -1,0 +1,34 @@
+<form [formGroup]="f">
+    <div class="row">
+        <div class="col"><input type="text" name="titre" formControlName="titre"></div>
+        <div class="col"><textarea id="area" formControlName="sujet"></textarea></div>
+        <div class="col">
+        <input type="file" name="image" formControlName="image" (change)="onFileChange($event)" >
+        </div>
+        <input type="hidden" name="sujet" formControlName="sujet">
+    </div>
+    </form>
+    <div style="text-align: center;">
+    <button class="btn btn-primary" (click)="test()">Preview</button>
+    </div>
+ <div style="background-image:url('assets/bg2.jpg')">
+    <div class="container-fluid padding ">
+        <div class="row padding">
+            <div class="col-md-12 col-lg-6">
+                <h2>{{titre}}</h2>
+                <p>{{sujet}}</p>
+                
+            </div>
+            <div class="col-lg-6">
+                <img src="http://localhost/carteAng/{{image}}" style="min-height: 100px;" class="img-fluid">
+                
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        <div style="text-align: center;">
+            <button class="btn btn-secondary" (click)="submit()">Valider</button>
+            </div>
+       
+

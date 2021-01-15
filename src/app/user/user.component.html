@@ -1,0 +1,9 @@
+<form [formGroup]="f" *ngIf="t">
+<div class="row">
+<div class="col">{{role}}</div>
+<div class="col"><input type="text" name="nom" formControlName="nom"value="nom"></div>
+<div class="col">{{password}}</div>
+<div class="buttons col"><button class="btn-sm btn-success" [routerLink]="['/modifier',nom,role,password,admin]">Modifier</button></div>
+<div class="buttons col"><button class="btn-sm btn-danger" (click)="deleteUse()"  >Supprimer</button></div>
+</div >
+</form>

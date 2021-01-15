@@ -1,0 +1,55 @@
+<nav class="bg-dark" style="color: white">
+  Bonjour monsieur {{nom}}
+  <span style="float: right;">
+    <a [routerLink]="['/admin',nom]">Home</a>
+    <a  [routerLink]="['/ajouter']">Ajouter utilisateur</a>
+      <a href="/login" style="color:red;margin-left:15px">Se déconnecter</a>
+  </span>
+</nav>
+<div class="container" style="text-align: center;">
+
+  <form class="well form-horizontal" action=" " method="post"  id="contact_form" [formGroup]="f">
+<fieldset>
+
+<legend ><h2><b>Ajouter utilisateur</b></h2></legend><br>
+
+
+<div class="form-group" > 
+  <label class="col-md-4 control-label">Rôle</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="department" class="form-control selectpicker" formControlName="roles">
+      <option>Department of Engineering</option>
+      <option>Department of Agriculture</option>
+      <option >Accounting Office</option>
+      <option >Tresurer's Office</option>
+      <option >MPDC</option>
+      <option >MCTC</option>
+      <option >MCR</option>
+      <option >Mayor's Office</option>
+      <option >Tourism Office</option>
+    </select>
+  </div>
+</div>
+</div>
+<div class="form-group">
+
+<input name="last_name" placeholder="Nom d'utilisateur" class="form-control"   type="hidden" formControlName="nom"value={{nomutil}}>
+
+
+</div>
+<div class="form-group">
+<label class="col-md-4 control-label" >Mot de passe</label> 
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="user_password" placeholder="Mot de passe" class="form-control"  type="password" formControlName="pw" value={{password}}>
+  </div>
+</div>
+</div>
+</fieldset>
+<button class="btn btn-success" [routerLink]="['/login']" style="margin:5px" (click)="onSubmit()">Modifier</button>
+<input type="reset" value="Annuler" class="btn btn-danger">
+</form>
+</div>

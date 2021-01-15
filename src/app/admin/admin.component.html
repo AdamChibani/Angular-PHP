@@ -1,0 +1,24 @@
+<nav class="bg-dark" style="color: white">
+    Bonjour monsieur {{nom}}
+    <span style="float: right;">
+        <a  [routerLink]="['/ajouter',nom]">Ajouter utilisateur</a>
+        <a href="/login" style="color:red;margin-left:15px">Se déconnecter</a>
+    </span>
+</nav>
+
+    <div class="row">
+        <div class="col">Rôle</div>
+        <div class="col">Username</div>
+        <div class="col">Password</div>
+        <div class="col">Modifier</div>
+        <div class="col">Supprimer</div>
+    </div>
+
+    
+    
+   
+    <app-user    *ngFor="let u of users"  [role]="u.role" [nom]="u.nom" [password]="u.password" [admin]="nom"></app-user>
+
+  
+ 
+

@@ -1,0 +1,23 @@
+<nav class="bg-dark" style="color: white">
+    Bonjour monsieur {{nom}}
+    <span style="float: right;">
+        <a href="/login" style="color:red;margin-left:15px">Se déconnecter</a>
+    </span>
+</nav>
+
+    <div class="row">
+        <div class="col">Nom</div>
+        <div class="col">Prénom</div>
+        <div class="col">Mail</div>        
+        <div class="col">Message et Piéce Jointe</div>
+        <div class="col">Tel</div>
+        <div class="col">Objet et Produit</div>
+        <div class="col">Déja client</div>
+        <div class="col">Répondre</div>
+        <div class="col">Supprimer</div>
+    </div>
+
+    
+    
+   
+    <app-assist *ngFor="let u of users"  [nom]="u.nom" [prenom]="u.prenom" [mail]="u.mail" [pj]="u.pj" [objet]="u.objet" [prod]="u.prod" [tel]="u.tel" [msg]="u.message" [carte]="u.carte" [id]="u.id"></app-assist>

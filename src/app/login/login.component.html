@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="../../assets/fontawesome/css/fontawesome.min.css">
+
+<body>
+ 
+    <div ngClass="card card-login mx-auto text-center bg-dark">
+        <div ngClass="card-header mx-auto bg-dark">
+            <span> <img src="../../assets/logo.png" class="logo" alt="Logo"> </span><br/>
+            <h2 style="color:rgb(79,136,166); "><span style="color:rgb(195,206,42);">40 ans</span> On vous l'assure.</h2>
+        </div>
+        <div ngClass="card-body">
+            <form action="" method="post">
+                <div ngClass="input-group form-group">
+                    <div ngClass="input-group-prepend">
+                        <span ngClass="input-group-text" style="background-color: black; border: 1px solid white;">
+                            <i class="fas fa-user-tie"></i></span>
+                    </div>
+                    <input type="text" name="email" [(ngModel)]="username" ngClass="form-control" placeholder="Username">
+                </div>
+                <div ngClass="input-group form-group">
+                    <div ngClass="input-group-prepend">
+                        <span ngClass="input-group-text" style="background-color: black; border: 1px solid white;"><img style="width: 30px;" src="../../assets/lock.png"></span>
+                    </div>
+                    <input type="password" [(ngModel)]="pw" name="password" ngClass="form-control" placeholder="Password">
+                </div>
+                <div ngClass="form-group">
+                    <input type="button" (click)="logAsAdmin(pw,username)" name="adm" value="Login as admin" ngClass="btn btn-outline-danger login_btn" >
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+<!--<ng-container >
+        <app-shop-client *ngFor="let it of itemsList;" [i]="it.image" [n]="it.nom" [p]="it.prix" [s]="it.stock"></app-shop-client>
+</ng-container>-->
+
+</body>

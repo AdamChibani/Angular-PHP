@@ -1,0 +1,15 @@
+<form [formGroup]="f" method="POST" *ngIf="t">
+    <div class="row">
+    <div class="col">{{nom}}</div>
+    <div class="col">{{prenom}}</div>
+    <div class="col">{{mail}}</div>
+    <div class="col"><a href="http://localhost/carteAng/{{pj}}">{{msg}}</a></div>
+    <div class="col">{{tel}}</div>
+    <div class="col">{{objet}}, {{prod}}</div>
+    <div class="col">{{carte}}</div>
+    <div class="buttons col"><a href="mailto:{{mail}}" (click)="accept()">Accepter</a></div>
+    <div class="buttons col"><a href="mailto:{{mail}}?subject=Votre%20probléme%20ne%20se%20comforme%20pas%20avec%20nos%20régles" (click)="supprimer()">Refuser</a></div>
+    </div >
+    <input type="hidden" name="id" formControlName="id" value="id">
+
+</form>
